@@ -1,19 +1,19 @@
 
-
-<html>
-<head>
-<meta charset="utf-8">
-<script src="js/jquery-2.1.3.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-<title></title>
-</head>
-<body>
-
-<div id="yoko"><div id="tate"><h1>YellowMagic相性診断</h1><p>〜黄色魔術の世界へようこそ〜</p></div>
-<img src="images/YMO_R.jpg" alt="yellow magic" width=200px height=200px></div>
+<?PHP
+include("head.php");
+include("funcs.php");
+?>
 
 <div id="center">
-<form action="insert.php" method="post"><table border="1">
+<form action="insert.php" method="post">
+<h2>新規登録へようこそ</h2>
+<table border="3"><th>
+メールアドレス(ログインID):<input type="text" name="lid" />
+<span style="font-size:12px">IDが被ると登録できません</span>
+<br>
+パスワード:<input type="password" name="lpw" />
+<span style="font-size:12px">パスワードはハッシュ化され、安全に保護されます。</span>
+<table border="1">
         <tr>
         <th>あなたの姓</th>
         <th>あなたの名</th>
@@ -60,7 +60,11 @@ for ($day = 1; $day<= 31; $day = $day+1) {
         
       </table>
       <input type="submit" id="sendsend" value="送信"></form> 
-    </div>
+    </span>
+
+    </table>
+
+    <a class="navbar-brand" href="logout.php">ログインはこちら</a>
 
 <!-- 
     <script type="text/javascript">
@@ -86,16 +90,16 @@ for ($day = 1; $day<= 31; $day = $day+1) {
 
 
 
-    <div class="camera">
+    <!-- <div class="camera">
         <video id="video">Video stream not available.</video>
     </div><br>
     <button id="startbutton">Take photo</button><br>
     <canvas id="canvas">
     <textarea id="readStr"></textarea>
-    </canvas>
+    </canvas> -->
 
 
-
+<!-- 
     <script>
 let width = 320    // We will scale the photo width to this
 let height = 0     // This will be computed based on the input stream
@@ -225,7 +229,7 @@ startup()
 
 
 
-</script>
+</script> -->
 
 
  <!-- <ul>
